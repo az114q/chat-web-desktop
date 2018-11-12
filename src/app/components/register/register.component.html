@@ -1,1 +1,32 @@
 <!-- 注册 -->
+<div class="wrap">
+  <nz-carousel [nzEffect]="'scrollx'">
+    <div nz-carousel-content *ngFor="let index of [1]">
+      <h3>{{index}}</h3>
+    </div>
+  </nz-carousel>
+  <div class="flex-wrap top">
+    <div>姓名</div>
+    <input nz-input placeholder="请输入姓名">
+  </div>
+  <div class="flex-wrap">
+    <div>学号</div>
+    <input nz-input placeholder="请输入学号">
+  </div>
+  <div class="flex-wrap">
+    <div>密码</div>
+    <input nz-input type="password" placeholder="请输入密码">
+  </div>
+  <div class="flex-wrap">
+    <div>确认密码</div>
+    <input nz-input type="password" placeholder="请输入密码">
+  </div>
+  <div class="flex-wrap bot">
+    <div>邮箱</div>
+    <input nz-input placeholder="请输入邮箱">
+  </div>
+
+  <button class="goon" nz-button nzType="primary" nzSize="large">提交</button>
+  <div class="help">需要帮助?</div>
+  <a routerLink="/" class="create-new">申请一个新帐号?</a>
+</div>

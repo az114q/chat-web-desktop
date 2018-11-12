@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PeopleListComponent } from './components/people-list/people-list.component';
 import { MapComponent } from './components/map/map.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
     {
@@ -21,6 +22,11 @@ const routes: Routes = [
     {
         path: 'list',
         component: PeopleListComponent
+    },
+    {
+
+        path: 'profile',
+        component: ProfileComponent
     }
 ];
 

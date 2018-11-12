@@ -25,6 +25,7 @@ import zh from '@angular/common/locales/zh';
 import { RegisterComponent } from './components/register/register.component';
 import { MapComponent } from './components/map/map.component';
 import { PeopleListComponent } from './components/people-list/people-list.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 registerLocaleData(zh);
 
@@ -40,7 +41,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     WebviewDirective,
     RegisterComponent,
     MapComponent,
-    PeopleListComponent
+    PeopleListComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

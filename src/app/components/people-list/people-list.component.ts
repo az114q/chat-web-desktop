@@ -7,7 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class PeopleListComponent implements OnInit {
+  loading = false;
+  data = [
+    {
+      title: 'Ant Design Title 1'
+    },
+    {
+      title: 'Ant Design Title 2'
+    },
+    {
+      title: 'Ant Design Title 3'
+    },
+    {
+      title: 'Ant Design Title 4'
+    }
+  ];
   constructor() { }
-
-  ngOnInit() { }
+  ngOnInit() {
+  }
 }
