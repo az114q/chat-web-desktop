@@ -22,6 +22,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
+import { RegisterComponent } from './components/register/register.component';
+import { MapComponent } from './components/map/map.component';
+import { PeopleListComponent } from './components/people-list/people-list.component';
 
 registerLocaleData(zh);
 
@@ -34,7 +37,10 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     HomeComponent,
-    WebviewDirective
+    WebviewDirective,
+    RegisterComponent,
+    MapComponent,
+    PeopleListComponent
   ],
   imports: [
     BrowserModule,

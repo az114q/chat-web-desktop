@@ -13,10 +13,13 @@ function createWindow() {
 
   // Create the browser window.
   win = new BrowserWindow({
-    x: 0,
-    y: 0,
-    width: size.width,
-    height: size.height
+    x: size.width / 2 - (376 / 2),
+    y: size.height / 2 - 333,
+    width: 376,
+    height: 666,
+    maxWidth: 376,
+    maxHeight: 666,
+    frame: false
   });
 
   if (serve) {
@@ -24,6 +27,7 @@ function createWindow() {
       electron: require(`${__dirname}/node_modules/electron`)
     });
     win.loadURL('http://localhost:4200');
+    win.webContents.openDevTools();
   } else {
     win.loadURL(url.format({
       pathname: path.join(__dirname, 'dist/index.html'),
@@ -32,7 +36,6 @@ function createWindow() {
     }));
   }
 
-  win.webContents.openDevTools();
 
   // Emitted when the window is closed.
   win.on('closed', () => {
