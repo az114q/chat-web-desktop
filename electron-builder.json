@@ -24,6 +24,10 @@
     "artifactName": "${productName}_setup_${version}.${ext}",
     "target": [
       "nsis"
+    ],
+    "arch": [
+      "x64",
+      "ia32"
     ]
   },
   "nsis": {
