@@ -1,0 +1,37 @@
+<div class="login-title">
+  校园城
+</div>
+<form nz-form class="login-form">
+  <nz-form-item>
+    <nz-form-control>
+      <nz-input-group [nzPrefix]="prefixUser">
+        <input type="text" nz-input nzSize="large" placeholder="请输入用户名/账号">
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control>
+      <nz-input-group [nzPrefix]="prefixLock">
+        <input type="password" nzSize="large" nz-input placeholder="请输入密码">
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <button nz-button nzType="primary" class="login-btn first-btn" nzSize="large" routerLink="/map">登录</button>
+  </nz-form-item>
+  <nz-form-item>
+    <button nz-button class="login-btn" nzSize="large" routerLink="/register">注册</button>
+  </nz-form-item>
+  <nz-divider [nzText]="text">
+    <ng-template #text><span class="tip">使用第三方账号登录</span></ng-template>
+  </nz-divider>
+  <nz-form-item>
+    <div class="icons">
+      <i nz-icon type="qq" theme="outline"></i>
+      <i nz-icon type="wechat" theme="outline"></i>
+      <i nz-icon type="weibo-circle" theme="outline"></i>
+    </div>
+  </nz-form-item>
+</form>
+<ng-template #prefixUser><i nz-icon type="user"></i></ng-template>
+<ng-template #prefixLock><i nz-icon type="lock"></i></ng-template>

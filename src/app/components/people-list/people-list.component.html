@@ -1,0 +1,21 @@
+<!-- 附近的人 -->
+<div class="wrap">
+  <nz-divider  [nzText]="text">
+    <ng-template #text><span class="re">上拉刷新</span></ng-template>
+  </nz-divider>
+  <nz-list [nzDataSource]="data" [nzRenderItem]="item" [nzItemLayout]="'horizontal'" [nzLoading]="loading">
+    <ng-template #item let-item>
+      <nz-list-item>
+        <nz-list-item-meta [nzTitle]="nzTitle" nzAvatar="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+          nzDescription="23/计算机163">
+          <ng-template #nzTitle>
+            <a>李传送</a>
+          </ng-template>
+        </nz-list-item-meta>
+      </nz-list-item>
+    </ng-template>
+  </nz-list>
+  <nz-divider [nzText]="text1">
+    <ng-template #text1><span class="more">下拉显示更多</span></ng-template>
+  </nz-divider>
+</div>

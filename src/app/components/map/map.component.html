@@ -1,0 +1,18 @@
+<div id="allmap"></div>
+<nz-input-group class="search" [nzSuffix]="suffixIconSearch">
+  <input type="text" nz-input placeholder="搜索地址">
+</nz-input-group>
+<ng-template #suffixIconSearch>
+  <i nz-icon type="search"></i>
+</ng-template>
+<ul class="btn-list">
+  <li routerLink="/profile">个人中心</li>
+  <li (click)="open()">好友列表</li>
+  <li routerLink="/list">附近的人</li>
+</ul>
+<nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="right" nzTitle="好友(15/100)" (nzOnClose)="close()">
+  <div class="user" *ngFor="let item of [1,2,3,4,5]">
+    <nz-avatar nzIcon="anticon anticon-user" nzSize="large" nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+    <div>李传送</div>
+  </div>
+</nz-drawer>
